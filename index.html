@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html onkeydown="action(event)">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level One</title>
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/common-pixel');
+        body{
+            font-family: 'Common Pixel', sans-serif;
+        }
+        #your_Health {
+            float:left;
+            font-size:30px;
+            position:relative;
+            left:0vw;
+            animation:heroIn 3s;
+        }
+        @keyframes heroIn {
+            0%{
+                position: relative;
+                left:-50vw;
+            }
+        }
+        #enemy_Health {
+            float:right;
+            font-size:30px;
+            position:relative;
+            left:0vw;
+            animation:enemyIn 3s;
+        }
+        @keyframes enemyIn {
+            0%{
+                position: relative;
+                left:50vw;
+            }
+        }
+
+        #information {
+            position:relative;
+            top:40vh;
+            font-size:50px;
+            left:0px;
+            animation: intro 2.5s;
+        }
+        @keyframes intro {
+            0%{
+                position:relative;
+                top:200vh;
+            }
+        }
+        #hero {
+            height:50vh;
+            position:relative; 
+            left:-50vh;
+            animation: heroIntro 1.5s;
+        }
+        @keyframes heroIntro {
+            0%{
+                position:relative;
+                left:-130vh;
+            }
+        }
+        #enemy {
+            height:50vh;
+            position:relative; 
+            left:50vh;
+            top:4vh;
+            animation:enemyIntro 2.5s;
+        }
+        @keyframes enemyIntro {
+            0%{
+                position:relative;
+                left:150vh;
+            }
+        }
+
+        #leave {
+            width:15vw;
+            height:10vh;
+            font-size:5vh;
+            color:white;
+            background-color: black;
+            position:relative;
+            top:-5vh;
+            animation: lea 3.2s;
+        }
+
+        @keyframes lea {
+            0%{
+                position:relative;
+                top:100vh;
+            }
+        }
+        #help {
+            position:relative;
+            top:-5vh;
+            animation: in 3s;
+        }
+        @keyframes in {
+            0%{
+                position: relative;
+                top:100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="your_Health"></div> 
+
+    <div id="enemy_Health"></div>
+
+    <center>
+    <h1 id="information"></h1>
+    <div style="height:100px;"></div>
+    <img id="hero" src="375-3751215_small-armor-knight-pixel-art-knight.png">
+    <img id="enemy" src="output-onlinepngtools.png">
+    <h2 id="help"></h2>
+    <button id="leave" onclick="leave()">Run Away</button>
+    </center>
+
+    <embed src="8-Bit Boss Battle- 4 - By EliteFerrex.mp3" loop="true" autostart="true" width="2" height="0">
+
+
+
+    <script src="lvlone.js"></script>
+</body>
+</html>
